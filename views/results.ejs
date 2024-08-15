@@ -1,0 +1,18 @@
+<% layout('layout') %>
+<section>
+    <h2>Search Results</h2>
+    <% if (results.length > 0) { %>
+        <ul class="movie-list">
+            <% results.forEach(function(movie) { %>
+                <li>
+                    <h3><%= movie.title %></h3>
+                    <p><strong>Director:</strong> <%= movie.director %></p>
+                    <p><strong>Genre:</strong> <%= movie.genre %></p>
+                    <p><strong>Release Year:</strong> <%= movie.year %></p>
+                </li>
+            <% }) %>
+        </ul>
+    <% } else { %>
+        <p>No results found for "<%= query %>".</p>
+    <% } %>
+</section>

@@ -1,0 +1,18 @@
+
+<% layout('layout') %>
+<section>
+    <h2>Search Movies</h2>
+    <form action="/search/results" method="GET">
+        <label for="query">Enter movie title or keyword:</label>
+        <input type="text" id="query" name="query" required>
+        
+        <label for="database">Choose database:</label>
+        <select id="database" name="database" required>
+            <option value="postgres">PostgreSQL</option>
+            <option value="mongodb">MongoDB</option>
+            <option value="both">Both</option>
+        </select>
+        
+        <button type="submit" class="button">Search</button>
+    </form>
+</section>
